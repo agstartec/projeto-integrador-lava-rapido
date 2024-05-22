@@ -1,0 +1,27 @@
+<html>
+<body>
+    <h1>Agendamentos</h1>
+    <table border="1">
+        <tr>
+            <th>Veículo</th>
+            <th>Placa</th>
+            <th>Serviço</th>
+            <th>Endereço</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Data e Hora</th>
+        </tr>
+        {% for agendamento in agendamentos %}
+        <tr>
+            <td>{{ agendamento.veiculo }}</td>
+            <td>{{ agendamento.placa }}</td>
+            <td>{{ agendamento.servico }}</td>
+            <td>{{ agendamento.endereco }}</td>
+            <td>{{ agendamento.nome }}</td>
+            <td>{{ agendamento.telefone }}</td>
+            <td>{{ agendamento.data_hora }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

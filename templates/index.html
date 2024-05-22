@@ -1,0 +1,33 @@
+<html>
+<body>
+    <h1>Agendamento de Lava Rápido</h1>
+    <form action="/agendar" method="post">
+        Veículo: <input type="text" name="veiculo"><br>
+        Placa: <input type="text" name="placa"><br>
+        Serviço: 
+        <select name="servico">
+            <option value="Lavagem técnica detalhada">Lavagem técnica detalhada</option>
+            <option value="Higienização de bancos">Higienização de bancos</option>
+            <option value="Higienização de bancos de couro e hidratação">Higienização de bancos de couro e hidratação</option>
+            <option value="Higienização de teto">Higienização de teto</option>
+            <option value="Higienização de carpete">Higienização de carpete</option>
+            <option value="Higienização interna completa">Higienização interna completa</option>
+            <option value="Restauração de farol">Restauração de farol</option>
+            <option value="Lavagem técnica de motor">Lavagem técnica de motor</option>
+        </select><br>
+        Endereço: <input type="text" name="endereco"><br>
+        Nome: <input type="text" name="nome"><br>
+        Telefone: <input type="text" name="telefone"><br>
+        Data: <input type="date" name="data"><br>
+        Hora: 
+        <select name="data_hora">
+            {% for hora in range(8, 19) %}
+                {% for minuto in ['00', '15', '30', '45'] %}
+                    <option value="{{ '%02d:%s' % (hora, minuto) }}">{{ '%02d:%s' % (hora, minuto) }}</option>
+                {% endfor %}
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Agendar">
+    </form>
+</body>
+</html>
