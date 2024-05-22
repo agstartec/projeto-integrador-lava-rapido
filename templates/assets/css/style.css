@@ -4,4 +4,48 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: Roboto;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.bg-dark{
+    background-color: black;
+}
+.text-dark{
+    color: rgb(27, 27, 27);
+}
+.text-white{
+    color: white;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.itens-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.w-50{
+    width: 50%;
+}
+.w-full{
+    width: 100%;
+}
+.p-2{
+    padding: 2rem;
+}
+.px-10{
+    padding: 10px;
+}
+.g-1{
+    gap: 1rem;
+}
+.fa-solid{
+    width: 30px;
+    height: 20px;
+    text-align: center;
 }

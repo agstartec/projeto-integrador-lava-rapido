@@ -1,0 +1,9 @@
+.content{
+    height: 90vh;   
+}
+.line{
+    width: 10%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+}
