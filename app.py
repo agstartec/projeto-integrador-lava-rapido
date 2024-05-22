@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from datetime import datetime
 
 app = Flask(__name__)
@@ -9,6 +9,10 @@ agendamentos = []
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/assets/<path:filename>')
+def serve_css(filename):
+    return send_from_directory('templates/assets', filename)
 
 @app.route('/agendar', methods=['POST'])
 def agendar():
