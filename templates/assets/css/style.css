@@ -44,8 +44,14 @@
 .g-1{
     gap: 1rem;
 }
+.gpx-5{
+    gap: 5px;
+}
 .fa-solid{
     width: 30px;
     height: 20px;
     text-align: center;
+}
+.fs-20{
+    font-size: 20px;
 }
