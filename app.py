@@ -6,13 +6,35 @@ app = Flask(__name__)
 # Lista para armazenar os agendamentos
 agendamentos = []
 
+usuarios = {'admin' : 'admin','user' : 'user'}
+
+senhas = {'admin' : '123','user' : '123'}
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('login.html')
 
 @app.route('/assets/<path:filename>')
 def serve_css(filename):
     return send_from_directory('templates/assets', filename)
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        
+        usuario = request.form['usuario']
+        senha = request.form['senha']
+        print(usuario)
+        print(senha)
+        if usuario and senha:
+            if usuario == usuarios['user'] and senha == senhas['user']:
+                return render_template('index.html')
+            elif usuario == usuarios['admin'] and senha == senhas['admin']:
+                return render_template('admin.html')
+            else:
+                return render_template('login.html')
+        else:
+            return render_template('login.html')
 
 @app.route('/agendar', methods=['POST'])
 def agendar():

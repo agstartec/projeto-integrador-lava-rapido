@@ -61,3 +61,10 @@
 .fs-20{
     font-size: 20px;
 }
+.btn-submit{
+    width: 200px;
+    height: 35px;
+    border: none;
+    background: blue;
+    color: white;
+}
