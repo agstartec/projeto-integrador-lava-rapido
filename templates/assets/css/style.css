@@ -29,6 +29,9 @@
 .justify-center{
     justify-content: center;
 }
+.justify-around{
+    justify-content: space-around;
+}
 .w-50{
     width: 50%;
 }
@@ -40,6 +43,9 @@
 }
 .px-10{
     padding: 10px;
+}
+.px-5{
+    padding: 5px;
 }
 .g-1{
     gap: 1rem;

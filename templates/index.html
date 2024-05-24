@@ -22,37 +22,113 @@
             </div>
         </nav>
     </header>
-    <section class="bg-dark text-white content">
-        <h1>Agendamento de Lava Rápido</h1>
-    <form action="/agendar" method="post">
-        Veículo: <input type="text" name="veiculo"><br>
-        Placa: <input type="text" name="placa"><br>
-        Serviço: 
-        <select name="servico">
-            <option value="Lavagem técnica detalhada">Lavagem técnica detalhada</option>
-            <option value="Higienização de bancos">Higienização de bancos</option>
-            <option value="Higienização de bancos de couro e hidratação">Higienização de bancos de couro e hidratação</option>
-            <option value="Higienização de teto">Higienização de teto</option>
-            <option value="Higienização de carpete">Higienização de carpete</option>
-            <option value="Higienização interna completa">Higienização interna completa</option>
-            <option value="Restauração de farol">Restauração de farol</option>
-            <option value="Lavagem técnica de motor">Lavagem técnica de motor</option>
-        </select><br>
-        Endereço: <input type="text" name="endereco"><br>
-        Nome: <input type="text" name="nome"><br>
-        Telefone: <input type="text" name="telefone"><br>
-        Data: <input type="date" name="data"><br>
-        Hora: 
-        <select name="data_hora">
-            {% for hora in range(8, 19) %}
-                {% for minuto in ['00', '15', '30', '45'] %}
-                    <option value="{{ '%02d:%s' % (hora, minuto) }}">{{ '%02d:%s' % (hora, minuto) }}</option>
-                {% endfor %}
-            {% endfor %}
-        </select><br>
-        <input type="submit" value="Agendar">
-    </form>
+    <section class="bg-dark text-white content flex itens-center justify-around">
+        <div class="flex flex-col gpx-5">
+            <h1>Agendamento de Lava Rápido</h1>
+            <form action="/agendar" method="post" class="flex flex-col gpx-5 px-10">
+                <label for="" class="px-10 flex gpx-5 itens-center">
+                    <i class="fa-solid fa-car fs-20"></i>
+                    <input class="input-txt px-5 w-full" type="text" name="Veiculo" placeholder="veiculo">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-rectangle-wide fs-20"><p class="placa">123</p></i>
+                    <input class="input-txt px-5 w-full" type="text" name="placa" placeholder="Placa">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-thumbs-up fs-20"></i>
+                    <select name="servico" class="input-txt px-5 w-full">
+                        <option value="Lavagem técnica detalhada">Lavagem técnica detalhada</option>
+                        <option value="Higienização de bancos">Higienização de bancos</option>
+                        <option value="Higienização de bancos de couro e hidratação">Higienização de bancos de couro e hidratação</option>
+                        <option value="Higienização de teto">Higienização de teto</option>
+                        <option value="Higienização de carpete">Higienização de carpete</option>
+                        <option value="Higienização interna completa">Higienização interna completa</option>
+                        <option value="Restauração de farol">Restauração de farol</option>
+                        <option value="Lavagem técnica de motor">Lavagem técnica de motor</option>
+                    </select>
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-location-dot fs-20"></i>
+                    <input class="input-txt px-5 w-full" type="text" name="endereco" placeholder="endereço">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-user fs-20"></i>
+                    <input class="input-txt px-5 w-full" type="text" name="nome" placeholder="Nome">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-phone fs-20"></i>
+                    <input class="input-txt px-5 w-full" type="text" name="telefone" placeholder="Telefone">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-calendar-days fs-20"></i>
+                    <input class="input-txt px-5 w-full" type="date" name="data">
+                </label>
+                <label class="px-10 flex gpx-5 itens-center" for="">
+                    <i class="fa-solid fa-clock fs-20"></i>
+                    <select name="data_hora" class="input-txt px-5 w-full">
+                        {% for hora in range(8, 19) %}
+                            {% for minuto in ['00', '15', '30', '45'] %}
+                                <option value="{{ '%02d:%s' % (hora, minuto) }}">{{ '%02d:%s' % (hora, minuto) }}</option>
+                            {% endfor %}
+                        {% endfor %}
+                    </select>
+                </label>
+                <label class="px-10 flex gpx-5 itens-center justify-center" for="">
+                    <input class="btn-submit" type="submit" value="Agendar">
+                </label>
+            </form>
+        </div>
+        <div class="text-dark">
+            <div id="container">
+                <div id="header">
+                  <div id="monthDisplay"></div>
+          
+                  <div>
+                    <button id="backButton">Voltar</button>
+                    <button id="nextButton">Próximo</button>
+                  </div>
+                    
+                </div>
+          
+                <div id="weekdays">
+                  <div>Domingo</div>
+                  <div>Segunda</div>
+                  <div>Terça</div>
+                  <div>Quarta</div>
+                  <div>Quinta</div>
+                  <div>Sexta</div>
+                  <div>Sábado</div>
+                </div>
+          
+          
+                <!-- div dinamic -->
+                <div id="calendar" ></div>
+          
+             
+            </div>
+          
+            <div id="newEventModal">
+              <h2>New Evente</h2>
+          
+              <input id="eventTitleInput" placeholder="Event Title"/>
+          
+              <button id="saveButton"> Salvar</button>
+              <button id="cancelButton">Cancelar</button>
+            </div>
+          
+            <div id="deleteEventModal">
+              <h2>Evento</h2>
+          
+              <div id="eventText"></div><br>
+          
+          
+              <button id="deleteButton">Deletar</button>
+              <button id="closeButton">Fechar</button>
+            </div>
+          
+            <div id="modalBackDrop"></div>          
+        </div>
     </section>
-    
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
