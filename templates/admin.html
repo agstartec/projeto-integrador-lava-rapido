@@ -9,7 +9,8 @@
             <th>Endereço</th>
             <th>Nome</th>
             <th>Telefone</th>
-            <th>Data e Hora</th>
+            <th>Data</th>
+            <th>Hora</th>
         </tr>
         {% for agendamento in agendamentos %}
         <tr>
@@ -19,7 +20,8 @@
             <td>{{ agendamento.endereco }}</td>
             <td>{{ agendamento.nome }}</td>
             <td>{{ agendamento.telefone }}</td>
-            <td>{{ agendamento.data_hora }}</td>
+            <td>{{ agendamento.data }}</td>
+            <td>{{ agendamento.hora }}</td>
         </tr>
         {% endfor %}
     </table>
