@@ -38,8 +38,7 @@ venv\Scripts\activate  # Para Windows
     <pre><code>app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://<usuario>:<senha>@localhost/<nome_do_banco>'
     </code></pre>
     <h3>5. Inicializar o Banco de Dados</h3>
-    <pre><code>from app import db
-db.create_all()
+    <pre><code>Importe o arquivo lava_rapido.sql para o seu banco de dados
     </code></pre>
     <h2>Uso</h2>
     <h3>Executar o Servidor</h3>
