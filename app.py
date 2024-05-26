@@ -30,8 +30,6 @@ class Agendamentos(db.Model):
     telefone = db.Column(db.String(45), nullable=False)
     data = db.Column(db.Date, nullable=False)
     hora = db.Column(db.String(45), nullable=False)
-    # def __init__(self):
-    #     return f'Agendamento(id={self.id}, veiculo={self.veiculo}, placa={self.placa}, servico={self.servico}, endereco={self.endereco}, nome={self.nome}, telefone={self.telefone}, data_hora={self.data_hora})'
 
 # Lista para armazenar os agendamentos
 with app.app_context():
