@@ -31,7 +31,8 @@ source venv/bin/activate  # Para Linux/Mac
 venv\Scripts\activate  # Para Windows
     </code></pre>
     <h3>3. Instalar as Dependências</h3>
-    <pre><code>pip install -r requirements.txt
+    <pre><code>pip freeze > requirements.txt <br>
+    pip install -r requirements.txt
     </code></pre>
     <h3>4. Configurar o Banco de Dados</h3>
     <p>Crie um banco de dados MySQL e configure a URI de conexão no arquivo <code>app.py</code>:</p>
