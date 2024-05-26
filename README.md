@@ -68,15 +68,15 @@ db.create_all()
     <h2>Estrutura do Projeto</h2>
     <pre><code>seurepositorio/
 │
-├── app.py                  # Arquivo principal da aplicação
-├── requirements.txt        # Lista de dependências do projeto
-├── templates/              # Arquivos HTML
-│   ├── login.html
-│   ├── index.html
-│   ├── admin.html
-│   └── assets/             # Arquivos estáticos (CSS, JS, imagens)
-│       └── ...
-└── README.md               # Este arquivo
+├── app.py                  # Arquivo principal da aplicação</br>
+├── requirements.txt        # Lista de dependências do projeto</br>
+├── templates/              # Arquivos HTML</br>
+│   ├── login.html</br>
+│   ├── index.html</br>
+│   ├── admin.html</br>
+│   └── assets/             # Arquivos estáticos (CSS, JS, imagens)</br>
+│       └── ...</br>
+└── README.md               # Este arquivo</br>
     </code></pre>
 
     <h2>Modelos de Dados</h2>
