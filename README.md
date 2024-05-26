@@ -75,7 +75,7 @@ db.create_all()
 ├── index.html</br>
 ├── admin.html</br>
 └── assets/             # Arquivos estáticos (CSS, JS, imagens)</br>
-│          └── ...</br>
+│______└── ...</br>
 └── README.md               # Este arquivo</br>
 </p>
     </code></pre>
