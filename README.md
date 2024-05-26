@@ -22,7 +22,7 @@
     </ul>
     <h2>Instalação</h2>
     <h3>1. Clonar o Repositório</h3>
-    <pre><code>git clone https://github.com/seuusuario/seurepositorio.git
+    <pre><code>git clone https://github.com/agstartec/projeto-integrador-lava-rapido.git
 cd seurepositorio
     </code></pre>
     <h3>2. Criar um Ambiente Virtual</h3>
